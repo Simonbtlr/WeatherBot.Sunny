@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f25c8b1_002Dccd2_002D43d3_002D9a05_002Db87420fc7dff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Bot_can_handle_text_messages #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::3BF9B0AA-855E-4450-A083-5D95531C8FA3::net6.0::WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events.ReceiveMessageTests.Bot_can_handle_text_messages&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f1635040_002D25b4_002D4988_002Dafd3_002D20f0bcc25d5f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Bot_can_handle_text_messages" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::3BF9B0AA-855E-4450-A083-5D95531C8FA3::net6.0::WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events.ReceiveMessageTests.Bot_can_handle_text_messages&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
