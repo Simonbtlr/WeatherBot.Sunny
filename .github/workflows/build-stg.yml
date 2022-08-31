@@ -22,6 +22,7 @@ jobs:
         run: dotnet restore
   
   build:
+    needs: restore
     runs-on: ubuntu-latest
     
     steps:
@@ -29,6 +30,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
   
   tests:
+    needs: build
     runs-on: ubuntu-latest
     
     steps:
