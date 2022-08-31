@@ -2,9 +2,8 @@ name: Deploy to Railway
 
 on:
   workflow_run:
-    workflows: [ Build (Production) ]
-    types:
-      - completed
+    workflows: [Build (Production)]
+    types: [completed]
 
 
 jobs:

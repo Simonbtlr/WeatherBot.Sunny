@@ -2,9 +2,8 @@ name: Deploy to Railway (Staging)
 
 on:
   workflow_run:
-    workflows: [ Build (Staging) ]
-    types:
-      - completed
+    workflows: [Build (Staging)]
+    types: [completed]
 
 jobs:
   deploy:
