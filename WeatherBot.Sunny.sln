@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3D5EBB
 		.dockerignorefile = .dockerignorefile
 		dockerfile = dockerfile
 		.gitignore = .gitignore
-		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C65EEA69-E268-4C0D-B0F2-D4C17B51BDFD}"
@@ -19,6 +18,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherBot.Sunny.Application.UnitTests", "tests\WeatherBot.Sunny.Application.UnitTests\WeatherBot.Sunny.Application.UnitTests.csproj", "{3BF9B0AA-855E-4450-A083-5D95531C8FA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherBot.Sunny.Application", "src\WeatherBot.Sunny.Application\WeatherBot.Sunny.Application.csproj", "{7AEC058F-A3AE-4019-9472-760F5B4EEBD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{18DDF0DF-F4A5-446F-AB7E-E47770CD5DB6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-prod.yml = .github\workflows\build-prod.yml
+		.github\workflows\build-stg.yml = .github\workflows\build-stg.yml
+		.github\workflows\deploy-prod.yml = .github\workflows\deploy-prod.yml
+		.github\workflows\deploy-stg.yml = .github\workflows\deploy-stg.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,5 +55,6 @@ Global
 		{BB7BA3A5-97BE-4477-8788-57CD02BCAB58} = {C65EEA69-E268-4C0D-B0F2-D4C17B51BDFD}
 		{3BF9B0AA-855E-4450-A083-5D95531C8FA3} = {C65EEA69-E268-4C0D-B0F2-D4C17B51BDFD}
 		{7AEC058F-A3AE-4019-9472-760F5B4EEBD8} = {4E2F1EC8-5499-40FD-88CC-565990ADCD29}
+		{18DDF0DF-F4A5-446F-AB7E-E47770CD5DB6} = {3D5EBB72-BE0F-45D2-8B11-9726BAEB0849}
 	EndGlobalSection
 EndGlobal
