@@ -1,4 +1,4 @@
-name: Build
+name: Build (Production)
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '6.0.x'
@@ -24,16 +24,18 @@ jobs:
         run: dotnet build --configuration Release --no-restore
   
   tests:
-    needs: build
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout
       - uses: actions/checkout@v3
 
-      - name: Restore
+      - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '6.0.x'
+
+      - name: Install dependencies
         run: dotnet restore
 
       - name: Build
