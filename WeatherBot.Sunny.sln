@@ -8,7 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3D5EBB
 	ProjectSection(SolutionItems) = preProject
 		.dockerignorefile = .dockerignorefile
 		dockerfile = dockerfile
-		fly.toml = fly.toml
 		.gitignore = .gitignore
 		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 	EndProjectSection
