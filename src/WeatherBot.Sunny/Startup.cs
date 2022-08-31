@@ -1,4 +1,3 @@
-using DotNetEnv;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,15 +11,15 @@ public class Startup
 {
     private readonly IConfiguration _configuration;
     private readonly IWebHostEnvironment _env;
-    
+
     public Startup(
-        IConfiguration configuration, 
+        IConfiguration configuration,
         IWebHostEnvironment env)
     {
         _configuration = configuration;
         _env = env;
 
-        Env.Load();
+        _env.LoadSecrets();
     }
 
     public void ConfigureServices(IServiceCollection services)

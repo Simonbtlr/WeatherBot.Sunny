@@ -1,6 +1,5 @@
 using FluentAssertions;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveMessage;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveStiker;
+using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
 using WeatherBot.Sunny.UnitTests.Common;
 
 namespace WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events;

@@ -8,13 +8,12 @@ using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveMessage;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveStiker;
+using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
 using WeatherBot.Sunny.Services.Telegram.Features.Events.UnknownUpdate;
-
 
 namespace WeatherBot.Sunny.Services.Telegram;
 
-public class UpdateHandler : IUpdateHandler
+public sealed class UpdateHandler : IUpdateHandler
 {
     private readonly IMediator _mediator;
     private readonly ILogger<UpdateHandler> _logger;
@@ -26,17 +25,17 @@ public class UpdateHandler : IUpdateHandler
     }
 
     public async Task HandleUpdateAsync(
-        ITelegramBotClient botClient, 
-        Update update, 
+        ITelegramBotClient botClient,
+        Update update,
         CancellationToken ct)
     {
         object request = update switch
         {
             { Message: { Text: { } text } message } => new ReceiveMessageEvent(message.Chat.Id, text),
-            { Message: { Sticker: { } } message} => new ReceiveStickerEvent(message.Chat.Id),
+            { Message: { Sticker: { } } message } => new ReceiveStickerEvent(message.Chat.Id),
             _ => new UnknownUpdateEvent(
-                update.Message?.Chat.Id, 
-                update.Message?.MessageId, 
+                update.Message?.Chat.Id,
+                update.Message?.MessageId,
                 update.Type)
         };
 
@@ -47,8 +46,8 @@ public class UpdateHandler : IUpdateHandler
     }
 
     public async Task HandlePollingErrorAsync(
-        ITelegramBotClient botClient, 
-        Exception exception, 
+        ITelegramBotClient botClient,
+        Exception exception,
         CancellationToken ct)
     {
         var errorMessage = exception switch

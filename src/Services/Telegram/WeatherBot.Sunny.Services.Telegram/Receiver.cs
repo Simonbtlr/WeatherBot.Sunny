@@ -9,15 +9,15 @@ using WeatherBot.Sunny.Services.Telegram.Abstractions;
 
 namespace WeatherBot.Sunny.Services.Telegram;
 
-public class Receiver : IReceiver
+public sealed class Receiver : IReceiver
 {
     private readonly ITelegramBotClient _botClient;
     private readonly IUpdateHandler _updateHandler;
     private readonly ILogger<IReceiver> _logger;
 
     public Receiver(
-        ITelegramBotClient botClient, 
-        IUpdateHandler updateHandler, 
+        ITelegramBotClient botClient,
+        IUpdateHandler updateHandler,
         ILogger<IReceiver> logger)
     {
         _botClient = botClient;

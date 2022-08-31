@@ -8,7 +8,7 @@ using WeatherBot.Sunny.Services.Telegram.Abstractions;
 
 namespace WeatherBot.Sunny.Services.Telegram;
 
-public class Polling : BackgroundService
+public sealed class Polling : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<Polling> _logger;

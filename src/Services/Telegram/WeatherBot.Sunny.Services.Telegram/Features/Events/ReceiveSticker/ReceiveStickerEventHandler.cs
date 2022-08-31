@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Telegram.Bot;
 
-namespace WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveStiker;
+namespace WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
 
 public sealed class ReceiveStickerEventHandler : INotificationHandler<ReceiveStickerEvent>
 {
@@ -15,10 +15,10 @@ public sealed class ReceiveStickerEventHandler : INotificationHandler<ReceiveSti
         _botClient = botClient;
     }
 
-    public async Task Handle(ReceiveStickerEvent @event, CancellationToken ct)
+    public async Task Handle(ReceiveStickerEvent notification, CancellationToken ct)
     {
         await _botClient.SendTextMessageAsync(
-            chatId: @event.ChatId,
+            chatId: notification.ChatId,
             text: Message,
             cancellationToken: ct);
     }
