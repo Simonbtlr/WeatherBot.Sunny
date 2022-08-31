@@ -13,11 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node
+      - name: Node
         uses: actions/setup-node@v3
-
+        with:
+          node-version: '16'
+      
       - name: Install Railway
-        run: npm -i -g railway@ctl
+        run: npm i -g @railway/ctl
 
       - name: Deploy
         run: railway up

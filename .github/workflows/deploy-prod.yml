@@ -6,28 +6,7 @@ on:
     types: [completed]
 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '6.0.x'
-
-      - name: Install dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
-  
+jobs: 
   deploy:
     runs-on: ubuntu-latest
     
@@ -35,11 +14,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node
+      - name: Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
       - name: Install Railway
-        run: npm -i -g railway@ctl
+        run: npm i -g @railway/ctl
 
       - name: Deploy
         run: railway up
