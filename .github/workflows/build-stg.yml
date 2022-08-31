@@ -6,9 +6,9 @@ on:
       - 'release/**'
 
 jobs:
-  restore:
+  build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -20,19 +20,25 @@ jobs:
 
       - name: Install dependencies
         run: dotnet restore
-  
-  build:
-    needs: restore
-    runs-on: ubuntu-latest
-    
-    steps:
+
       - name: Build
         run: dotnet build --configuration Release --no-restore
   
   tests:
     needs: build
     runs-on: ubuntu-latest
-    
+
     steps:
+      - uses: actions/checkout@v3
+
+      - name: Restore
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
       - name: Test
         run: dotnet test --no-restore --verbosity normal
