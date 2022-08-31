@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3D5EBB
 		dockerfile = dockerfile
 		fly.toml = fly.toml
 		.gitignore = .gitignore
-		.github\workflows\main.yml = .github\workflows\main.yml
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C65EEA69-E268-4C0D-B0F2-D4C17B51BDFD}"
