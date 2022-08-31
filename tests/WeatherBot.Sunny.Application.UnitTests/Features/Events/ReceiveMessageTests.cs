@@ -1,13 +1,13 @@
 using FluentAssertions;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.UnknownUpdate;
+using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveMessage;
 using WeatherBot.Sunny.UnitTests.Common;
 
-namespace WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events;
+namespace WeatherBot.Sunny.Application.UnitTests.Features.Events;
 
-public class UnknownUpdateTests : EventHandlerTestBase<UnknownUpdateEvent, UnknownUpdateEventHandler>
+public class ReceiveMessageTests : EventHandlerTestBase<ReceiveMessageEvent, ReceiveMessageEventHandler>
 {
     [Fact]
-    public async Task Bot_can_handle_unknown_messages()
+    public async Task Bot_can_handle_text_messages()
     {
         // Arrange
         var notification = Event.Create();

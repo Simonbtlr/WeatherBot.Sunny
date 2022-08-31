@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace WeatherBot.Sunny.Services.Telegram.Abstractions;
+namespace WeatherBot.Sunny.Application;
 
 public interface IReceiver
 {

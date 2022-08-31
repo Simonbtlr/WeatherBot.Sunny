@@ -8,7 +8,7 @@ namespace WeatherBot.Sunny.Services.Telegram.Features.Events.UnknownUpdate;
 
 public sealed class UnknownUpdateEventHandler : INotificationHandler<UnknownUpdateEvent>
 {
-    private const string Message = "I can't reply to messages like this yet:"; 
+    private const string Message = "I can't reply to messages like this yet:";
     private readonly ILogger<UnknownUpdateEventHandler> _logger;
     private readonly ITelegramBotClient _botClient;
 

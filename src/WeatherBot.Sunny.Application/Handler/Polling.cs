@@ -4,9 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using WeatherBot.Sunny.Services.Telegram.Abstractions;
 
-namespace WeatherBot.Sunny.Services.Telegram;
+namespace WeatherBot.Sunny.Application.Handler;
 
 public sealed class Polling : BackgroundService
 {

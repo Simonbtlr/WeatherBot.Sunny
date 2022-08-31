@@ -5,9 +5,8 @@ using Microsoft.Extensions.Logging;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
-using WeatherBot.Sunny.Services.Telegram.Abstractions;
 
-namespace WeatherBot.Sunny.Services.Telegram;
+namespace WeatherBot.Sunny.Application.Handler;
 
 public sealed class Receiver : IReceiver
 {

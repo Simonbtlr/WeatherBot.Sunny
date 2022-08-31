@@ -1,13 +1,13 @@
 using FluentAssertions;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveMessage;
+using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
 using WeatherBot.Sunny.UnitTests.Common;
 
-namespace WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events;
+namespace WeatherBot.Sunny.Application.UnitTests.Features.Events;
 
-public class ReceiveMessageTests : EventHandlerTestBase<ReceiveMessageEvent, ReceiveMessageEventHandler>
+public class ReceiveStickerTests : EventHandlerTestBase<ReceiveStickerEvent, ReceiveStickerEventHandler>
 {
     [Fact]
-    public async Task Bot_can_handle_text_messages()
+    public async Task Bot_can_handle_sticker_messages()
     {
         // Arrange
         var notification = Event.Create();

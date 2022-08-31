@@ -1,13 +1,13 @@
 using FluentAssertions;
-using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
+using WeatherBot.Sunny.Services.Telegram.Features.Events.UnknownUpdate;
 using WeatherBot.Sunny.UnitTests.Common;
 
-namespace WeatherBot.Sunny.Services.Telegram.UnitTests.Features.Events;
+namespace WeatherBot.Sunny.Application.UnitTests.Features.Events;
 
-public class ReceiveStickerTests : EventHandlerTestBase<ReceiveStickerEvent, ReceiveStickerEventHandler>
+public class UnknownUpdateTests : EventHandlerTestBase<UnknownUpdateEvent, UnknownUpdateEventHandler>
 {
     [Fact]
-    public async Task Bot_can_handle_sticker_messages()
+    public async Task Bot_can_handle_unknown_messages()
     {
         // Arrange
         var notification = Event.Create();

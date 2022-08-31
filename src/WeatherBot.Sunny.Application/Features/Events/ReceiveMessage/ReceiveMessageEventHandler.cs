@@ -15,7 +15,7 @@ public sealed class ReceiveMessageEventHandler : INotificationHandler<ReceiveMes
     }
 
     public async Task Handle(
-        ReceiveMessageEvent notification, 
+        ReceiveMessageEvent notification,
         CancellationToken ct)
     {
         await _botClient.SendTextMessageAsync(

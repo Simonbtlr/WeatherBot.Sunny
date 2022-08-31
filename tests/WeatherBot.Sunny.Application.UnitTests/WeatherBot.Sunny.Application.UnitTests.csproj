@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Services\Telegram\WeatherBot.Sunny.Services.Telegram\WeatherBot.Sunny.Services.Telegram.csproj" />
+      <ProjectReference Include="..\..\src\WeatherBot.Sunny.Application\WeatherBot.Sunny.Application.csproj"/>
       <ProjectReference Include="..\WeatherBot.Sunny.UnitTests.Common\WeatherBot.Sunny.UnitTests.Common.csproj" />
     </ItemGroup>
 

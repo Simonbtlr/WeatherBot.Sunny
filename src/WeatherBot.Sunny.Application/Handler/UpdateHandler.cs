@@ -11,7 +11,7 @@ using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveMessage;
 using WeatherBot.Sunny.Services.Telegram.Features.Events.ReceiveSticker;
 using WeatherBot.Sunny.Services.Telegram.Features.Events.UnknownUpdate;
 
-namespace WeatherBot.Sunny.Services.Telegram;
+namespace WeatherBot.Sunny.Application.Handler;
 
 public sealed class UpdateHandler : IUpdateHandler
 {

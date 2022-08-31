@@ -3,8 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
-using WeatherBot.Sunny.Services.Telegram;
-using WeatherBot.Sunny.Services.Telegram.Abstractions;
+using WeatherBot.Sunny.Application;
+using WeatherBot.Sunny.Application.Handler;
 
 namespace WeatherBot.Sunny.Modules;
 

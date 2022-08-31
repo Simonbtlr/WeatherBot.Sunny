@@ -21,16 +21,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Services\Telegram\WeatherBot.Sunny.Services.Telegram\WeatherBot.Sunny.Services.Telegram.csproj"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <None Update=".env.staging">
             <DependentUpon>.env</DependentUpon>
         </None>
         <None Update=".env.production">
             <DependentUpon>.env</DependentUpon>
         </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\WeatherBot.Sunny.Application\WeatherBot.Sunny.Application.csproj"/>
     </ItemGroup>
 
 </Project>
