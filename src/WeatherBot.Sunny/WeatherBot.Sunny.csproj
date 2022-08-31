@@ -5,20 +5,32 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Update="appsettings.Production.json">
-          <DependentUpon>appsettings.json</DependentUpon>
-      </Content>
+        <Content Update="appsettings.Production.json">
+            <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
+        <Content Update="appsettings.Staging.json">
+            <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="DotNetEnv" Version="2.3.0" />
-      <PackageReference Include="MediatR" Version="10.0.1" />
-      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-      <PackageReference Include="Telegram.Bot" Version="18.0.0" />
+        <PackageReference Include="DotNetEnv" Version="2.3.0"/>
+        <PackageReference Include="MediatR" Version="10.0.1"/>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
+        <PackageReference Include="Telegram.Bot" Version="18.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Services\Telegram\WeatherBot.Sunny.Services.Telegram\WeatherBot.Sunny.Services.Telegram.csproj" />
+        <ProjectReference Include="..\Services\Telegram\WeatherBot.Sunny.Services.Telegram\WeatherBot.Sunny.Services.Telegram.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update=".env.staging">
+            <DependentUpon>.env</DependentUpon>
+        </None>
+        <None Update=".env.production">
+            <DependentUpon>.env</DependentUpon>
+        </None>
     </ItemGroup>
 
 </Project>
