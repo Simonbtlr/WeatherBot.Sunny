@@ -1,0 +1,25 @@
+name: Deploy to Railway (Staging)
+
+on:
+  workflow_run:
+    workflows: [Build (Staging)]
+    types: [completed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+
+      - name: Install Railway
+        run: npm -i -g railway@ctl
+
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_STAGING }}
