@@ -39,6 +39,9 @@ jobs:
       
       - name: Install Railway
         run: npm i -g @railway/cli
+        
+      - name: Install libicu63
+        run: railway run apt-get update && apt-get install -qqq libicu63
 
       - name: Deploy
         run: railway up
