@@ -11,9 +11,6 @@
         <Content Update="appsettings.Staging.json">
             <DependentUpon>appsettings.json</DependentUpon>
         </Content>
-        <Content Update="runtimeconfig.Staging.json">
-          <DependentUpon>runtimeconfig.json</DependentUpon>
-        </Content>
     </ItemGroup>
 
     <ItemGroup>
