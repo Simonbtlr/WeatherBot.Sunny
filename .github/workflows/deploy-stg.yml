@@ -1,9 +1,11 @@
 name: Deploy to Railway (Staging)
 
 on:
+  push:
+    branches: [ "release/**" ]
   workflow_run:
-    workflows: [Build (Staging)]
-    types: [completed]
+    workflows: [ .NET ]
+    types: [ completed ]
 
 jobs:
   deploy:
