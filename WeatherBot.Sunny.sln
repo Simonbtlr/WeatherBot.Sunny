@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherBot.Sunny.Applicatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{18DDF0DF-F4A5-446F-AB7E-E47770CD5DB6}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build-prod.yml = .github\workflows\build-prod.yml
-		.github\workflows\build-stg.yml = .github\workflows\build-stg.yml
 		.github\workflows\deploy-prod.yml = .github\workflows\deploy-prod.yml
 		.github\workflows\deploy-stg.yml = .github\workflows\deploy-stg.yml
 	EndProjectSection
