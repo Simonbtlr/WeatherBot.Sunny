@@ -42,8 +42,10 @@ jobs:
           usedocker: true
           docker_build_args: |
             ASPNETCORE_ENVIRONMENT
+            BOT_TOKEN_STAGING
         env:
           ASPNETCORE_ENVIRONMENT: Staging
+          BOT_TOKEN_STAGING: ${{ secrets.BOT_TOKEN_STAGING }}
       
       - name: Relese
         run: heroku container:release web
