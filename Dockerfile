@@ -14,6 +14,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out ./
-EXPOSE $PORT
 ENV ASPNETCORE_URLS=http://+:$PORT
 ENTRYPOINT ["dotnet", "WeatherBot.Sunny.dll"]
