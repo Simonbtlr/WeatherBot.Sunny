@@ -12,13 +12,15 @@ public static class TelegramModule
 {
     public static IServiceCollection AddTelegramModule(this IServiceCollection services, IConfiguration configuration)
     {
-        var botOptions = configuration.GetSection("BotConfiguration");
-        botOptions["BotToken"] = Environment.GetEnvironmentVariable("BOT_TOKEN");
-
         services.AddHttpClient("telegram_bot_client")
             .AddTypedClient<ITelegramBotClient>((httpClient, _) =>
             {
-                var options = new TelegramBotClientOptions(botOptions["BotToken"]);
+                var token = Environment.GetEnvironmentVariable("BOT_TOKEN");
+
+                if (token is null)
+                    throw new ArgumentNullException(nameof(token));
+
+                var options = new TelegramBotClientOptions(token);
 
                 return new TelegramBotClient(options, httpClient);
             });
