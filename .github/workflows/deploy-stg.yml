@@ -46,6 +46,3 @@ jobs:
         env:
           ASPNETCORE_ENVIRONMENT: Staging
           BOT_TOKEN_STAGING: ${{ secrets.BOT_TOKEN_STAGING }}
-      
-      - name: Relese
-        run: heroku container:release web
