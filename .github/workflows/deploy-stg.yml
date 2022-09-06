@@ -33,15 +33,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Login to Docker Hub
+      - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "weather-bot-sunny"
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          branch: release/**
           usedocker: true
           docker_build_args: |
             ASPNETCORE_ENVIRONMENT
         env:
           ASPNETCORE_ENVIRONMENT: Staging
+      
+      - name: Relese
+        run: heroku container:release web
