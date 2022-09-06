@@ -39,8 +39,9 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "weather-bot-sunny"
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          branch: release/**
           usedocker: true
           docker_build_args: |
-            NODE_ENV
+            ASPNETCORE_ENVIRONMENT
         env:
-          NODE_ENV: Staging
+          ASPNETCORE_ENVIRONMENT: Staging
