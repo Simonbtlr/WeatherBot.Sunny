@@ -7,8 +7,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3D5EBB72-BE0F-45D2-8B11-9726BAEB0849}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignorefile = .dockerignorefile
-		dockerfile = dockerfile
 		.gitignore = .gitignore
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C65EEA69-E268-4C0D-B0F2-D4C17B51BDFD}"

@@ -40,9 +40,3 @@ jobs:
           heroku_app_name: "weather-bot-sunny-stg"
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           usedocker: true
-          docker_build_args: |
-            ASPNETCORE_ENVIRONMENT
-            BOT_TOKEN_STAGING
-        env:
-          ASPNETCORE_ENVIRONMENT: Staging
-          BOT_TOKEN_STAGING: ${{ secrets.BOT_TOKEN_STAGING }}
