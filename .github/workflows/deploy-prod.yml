@@ -27,22 +27,17 @@ jobs:
       run: dotnet test --no-build --verbosity normal
   
   deploy:
-    needs: ['build']
+    needs: [ 'build' ]
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Node
-        uses: actions/setup-node@v3
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          node-version: '16'
-
-      - name: Install Railway
-        run: npm i -g @railway/cli
-
-      - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_PRODUCTION }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "weather-bot-sunny"
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          usedocker: true
